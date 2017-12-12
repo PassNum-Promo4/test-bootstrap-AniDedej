@@ -2,59 +2,94 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
   <title>Bootstrap</title>
 </head>
-<body>
-  <img src="http://fakeimg.pl/150/" alt="fakeimage">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Duis id elementum risus, nec suscipit lectus. Aliquam metus lacus, 
-    rhoncus sit amet magna nec, dignissim euismod orci. Suspendisse id 
-    lacus rhoncus, dapibus mauris et, ornare erat. Phasellus egestas eu 
-    orci sit amet pulvinar. Aenean eget lorem ac mi tristique volutpat. 
-    Nam elit massa, finibus vitae gravida at, lobortis eget tellus. 
-  </p>
-  <button type="button">Oui</button>
-  <button type="button">Non</button>
-  <h1>Lorem Ipsum</h1>
-  <p>Aenean eget lorem ac mi tristique volutpat. 
-  Nam elit massa, finibus vitae gravida at, lobortis eget tellus.</p>
-  <a href="#">Super</a>
-  <img src="http://fakeimg.pl/300/" alt="fakeimg">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Duis id elementum risus, nec suscipit lectus. Aliquam metus lacus, 
-    rhoncus sit amet magna nec, dignissim euismod orci. Suspendisse id 
-    lacus rhoncus, dapibus mauris et, ornare erat. Phasellus egestas eu 
-    orci sit amet pulvinar. Aenean eget lorem ac mi tristique volutpat. 
-    Nam elit massa, finibus vitae gravida at, lobortis eget tellus. 
-  </p>
-  <img src="http://fakeimg.pl/300/" alt="fakeimg">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Duis id elementum risus, nec suscipit lectus. Aliquam metus lacus, 
-    rhoncus sit amet magna nec, dignissim euismod orci. Suspendisse id 
-    lacus rhoncus, dapibus mauris et, ornare erat. Phasellus egestas eu 
-    orci sit amet pulvinar. Aenean eget lorem ac mi tristique volutpat. 
-    Nam elit massa, finibus vitae gravida at, lobortis eget tellus. 
-  </p>
-  <img src="http://fakeimg.pl/300/" alt="fakeimg">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Duis id elementum risus, nec suscipit lectus. Aliquam metus lacus, 
-    rhoncus sit amet magna nec, dignissim euismod orci. Suspendisse id 
-    lacus rhoncus, dapibus mauris et, ornare erat. Phasellus egestas eu 
-    orci sit amet pulvinar. Aenean eget lorem ac mi tristique volutpat. 
-    Nam elit massa, finibus vitae gravida at, lobortis eget tellus. 
-  </p>
-  <img src="http://fakeimg.pl/300/" alt="fakeimg">
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Duis id elementum risus, nec suscipit lectus. Aliquam metus lacus, 
-    rhoncus sit amet magna nec, dignissim euismod orci. Suspendisse id 
-    lacus rhoncus, dapibus mauris et, ornare erat. Phasellus egestas eu 
-    orci sit amet pulvinar. Aenean eget lorem ac mi tristique volutpat. 
-    Nam elit massa, finibus vitae gravida at, lobortis eget tellus. 
-  </p>
+<body class="container-fluid">
+  <div class="row"> <!-- row pour le rangée -->
+    <div class="col-md-4 col-sm-12 text-white bg-dark d-flex flex-column align-items-center">
+      <!-- col-md-4 pour prendre 4 sur 12 de place -992px (la largeur d'ecran sur bootstrap).
+        col-sm-12 pour prendre 12 sur 12 de place -575px.
+        text-white == la couleur de texte.
+        bg-dark == la couleur de fond.
+        flex-column == pour le mettre en colon.
+        align-items-center == pour alignée les elements en centre -->
+      <div class="pt-5 pb-5"> <!-- pt-5 mettre padding au haute de div. pb-5 mettre padding en bas de div. -->
+          <img class="img-fluid rounded-circle" src="http://fakeimg.pl/150/" alt="fakeimage">
+          <!-- img-fluid pour rendre l'image responsive. rounded-circle pour mettre les bordure en rond. -->
+      </div>
+      <p class="pb-5">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Duis id elementum risus, nec suscipit lectus. Aliquam metus lacus,
+        rhoncus sit amet magna nec, dignissim euismod orci. Suspendisse id
+        lacus rhoncus, dapibus mauris et, ornare erat. Phasellus egestas eu
+        orci sit amet pulvinar. Aenean eget lorem ac mi tristique volutpat.
+        Nam elit massa, finibus vitae gravida at, lobortis eget tellus.
+      </p>
+      <div class="w-100 d-flex justify-content-around pb-5">
+        <!-- w-100 pour avoir le width 100%. justify-content-around pour avoir des espace entre les elements -->
+          <button class="btn btn-success" type="button">Oui</button>
+          <button class="btn btn-danger" type="button">Non</button>
+      </div>
+    </div>
+    <div class="col-md-8 col-sm-12">
+      <div class="pb-3">
+        <h1>Lorem Ipsum</h1>
+        <p>Aenean eget lorem ac mi tristique volutpat.
+        Nam elit massa, finibus vitae gravida at, lobortis eget tellus.</p>
+        <a class="btn btn-primary" href="#">Super</a>
+      </div>
+      <div class="border border-top-dark bg-light row pt-1 justify-content-center">
+        <!-- bordder pour metre des bordure. border-top-dark pour mettre la bordure de haute avec une couleur noire
+          justify-content-center pour centre horizontalement les elements -->
+        <div class="col-lg-6 col-md-8 p-lg-5 d-flex justify-content-center flex-column">
+          <img class="img-fluid align-self-center" src="http://fakeimg.pl/300/" alt="fakeimg">
+          <!-- align-self-center pour centre l'element img verticalement -->
+          <p class="pt-4 pb-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Duis id elementum risus, nec suscipit lectus. Aliquam metus lacus,
+            rhoncus sit amet magna nec, dignissim euismod orci. Suspendisse id
+            lacus rhoncus, dapibus mauris et, ornare erat. Phasellus egestas eu
+            orci sit amet pulvinar. Aenean eget lorem ac mi tristique volutpat.
+            Nam elit massa, finibus vitae gravida at, lobortis eget tellus.
+          </p>
+        </div>
+        <div class="col-lg-6 col-md-8 p-lg-5 d-flex justify-content-center flex-column">
+          <img class="img-fluid align-self-center" src="http://fakeimg.pl/300/" alt="fakeimg">
+          <p class="pt-4 pb-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Duis id elementum risus, nec suscipit lectus. Aliquam metus lacus,
+            rhoncus sit amet magna nec, dignissim euismod orci. Suspendisse id
+            lacus rhoncus, dapibus mauris et, ornare erat. Phasellus egestas eu
+            orci sit amet pulvinar. Aenean eget lorem ac mi tristique volutpat.
+            Nam elit massa, finibus vitae gravida at, lobortis eget tellus.
+          </p>
+        </div>
+        <div class="col-lg-6 col-md-8 p-lg-5 d-flex justify-content-center flex-column">
+          <img class="img-fluid align-self-center" src="http://fakeimg.pl/300/" alt="fakeimg">
+          <p class="pt-4 pb-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Duis id elementum risus, nec suscipit lectus. Aliquam metus lacus,
+            rhoncus sit amet magna nec, dignissim euismod orci. Suspendisse id
+            lacus rhoncus, dapibus mauris et, ornare erat. Phasellus egestas eu
+            orci sit amet pulvinar. Aenean eget lorem ac mi tristique volutpat.
+            Nam elit massa, finibus vitae gravida at, lobortis eget tellus.
+          </p>
+        </div>
+        <div class="col-lg-6 col-md-8 p-lg-5 d-flex justify-content-center flex-column">
+          <img class="img-fluid align-self-center" src="http://fakeimg.pl/300/" alt="fakeimg">
+          <p class="pt-4 pb-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Duis id elementum risus, nec suscipit lectus. Aliquam metus lacus,
+            rhoncus sit amet magna nec, dignissim euismod orci. Suspendisse id
+            lacus rhoncus, dapibus mauris et, ornare erat. Phasellus egestas eu
+            orci sit amet pulvinar. Aenean eget lorem ac mi tristique volutpat.
+            Nam elit massa, finibus vitae gravida at, lobortis eget tellus.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </body>
 </html>
